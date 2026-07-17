@@ -27,6 +27,20 @@ text_surface = font.render("Score: 0", True, (0, 0, 0))
 is_running = True
 while is_running:
     for event in pygame.event.get():
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_UP:
+                snake1.velocity_y = -1
+                snake1.velocity_x = 0
+            elif event.key == pygame.K_DOWN:
+                snake1.velocity_y = 1
+                snake1.velocity_x = 0
+            elif event.key == pygame.K_LEFT:
+                snake1.velocity_x = -1
+                snake1.velocity_y = 0
+            elif event.key == pygame.K_RIGHT:
+                snake1.velocity_x = 1
+                snake1.velocity_y = 0
+                print(snake1.velocity_x, snake1.velocity_y)
         if event.type == pygame.QUIT:
             is_running = False
 
@@ -38,9 +52,9 @@ while is_running:
     snake1.draw(screen)
     food1.draw(screen)
 
-    key = pygame.key.get_pressed()
-    if key [pygame.K_UP]:
+    """    if key [pygame.K_UP]:
         snake1.velocity_y= -1
+        print(snake1.velocity_y)
 
     if key [pygame.K_DOWN]:
         snake1.velocity_y= 1
@@ -49,9 +63,9 @@ while is_running:
         snake1.velocity_x = -1   #-1 sol, 0 sabit, 1 sağ
     
     if key [pygame.K_RIGHT]:
-        snake1.velocity_x = 1
+        snake1.velocity_x = 1 """
 
-
+    
 
 
 

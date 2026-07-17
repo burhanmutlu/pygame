@@ -18,8 +18,8 @@ class Snake:
     def draw(self, screen):
         for _ in range(self.initial_length):
             pygame.draw.rect(screen, self.color, (self.x, self.y, self.width, self.height))
-            self.x += (self.width+5) 
-            time.sleep(0.1)
+            self.x += (self.width+5)//2
+            #time.sleep(0.1)
 
     def grow(self):
         self.initial_length += 1
