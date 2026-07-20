@@ -22,3 +22,7 @@ text_rect.topleft = (20, 20) # Position near top-left corner
 
 
 pygame.mixer.Sound("efekt.wav").play()  # Play the sound effect
+
+
+
+
