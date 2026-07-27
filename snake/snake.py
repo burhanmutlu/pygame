@@ -5,7 +5,7 @@ import pygame
 class Snake:
     def __init__(self):
         self.initial_length = 3
-        self.body = [(60, 60),(40,60),(20,60)] 
+        self.body = [(60+5, 60+5),(40+5,60+5),(20+5,60+5)]
         self.color = (5, 5, 5) 
         self.width = 20
         self.height = 20
@@ -32,6 +32,8 @@ class Snake:
     @property
     def head(self): 
         return pygame.rect.Rect(self.body[0][0], self.body[0][1], self.width, self.height)
+    def get_position(self):
+        return  self.body[0]
     
         
         
